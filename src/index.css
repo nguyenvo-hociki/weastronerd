@@ -1,0 +1,208 @@
+/* Full reset + black app background */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ===== Top Navbar ===== */
+.navbar {
+  position: fixed;     /* stays on top */
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 72px;
+  background: #000;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  border-bottom: none;
+  z-index: 999;
+}
+
+/* Left / middle / right columns */
+.nav-left,
+.nav-center,
+.nav-right {
+  flex: 1;             /* each takes equal space */
+  display: flex;
+  align-items: center;
+}
+
+/* left content stays left */
+.nav-left {
+  justify-content: flex-start;
+  gap: 18px;
+  padding-left: 30px;
+}
+
+/* center content stays center */
+.nav-center {
+  justify-content: center;
+}
+
+/* right content stays right */
+.nav-right {
+  justify-content: flex-end;
+   padding-right: 30px;
+}
+
+/* menu links */
+.nav-link {
+  font-family: "Audiowide", ui-sans-serif, system-ui;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.nav-link:hover {
+  color: #fff;
+}
+
+/* logo image */
+.nav-logo {
+  height: 100px;   /* change this to make logo bigger */
+  width: auto;
+  display: block;
+}
+
+/* search input */
+.nav-search {
+  width: 220px;
+  height: 38px;
+  padding: 0 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: #0a0a0a;
+  color: #fff;
+  outline: none;
+}
+
+.nav-search::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* Adds space under fixed navbar so content isn't hidden */
+.page {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+/* 3x3 mosaic grid */
+.mosaic {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+/* each tile */
+.tile {
+  position: relative;
+  overflow: hidden;
+  background: #000;
+  border: none;
+  outline: none;
+  transform: scale(1.0015750528);
+}
+
+/* video fills the tile */
+.tile video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* crop like fashion sites */
+  display: block;
+}
+
+/* center title overlay */
+.center-title {
+  font-family: "Audiowide", ui-sans-serif, system-ui;
+  position: absolute;
+  inset: 0; /* top right bottom left = 0 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 56px;
+  font-weight: 800;
+  letter-spacing: 6px;
+  color: rgba(255, 255, 255, 0.85);
+  text-transform: uppercase;
+  pointer-events: none; /* click goes through */
+}
+
+.black-page {
+  font-family: "Audiowide", ui-sans-serif, system-ui;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.black-text {
+  color: #fff;
+  font-size: 48px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.home {
+  padding-top: 72px; /* navbar height */
+}
+
+.section {
+  height: calc(100vh - 72px);
+  width: 100%;
+}
+
+/* Social icons on right edge of the black page */
+.social-rail {
+  position: fixed;          /* stays on screen */
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 1000;            /* above videos */
+}
+
+.social-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(0,0,0,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icon:hover {
+  border-color: rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.06);
+}
+
+.icon-svg {
+  width: 20px;
+  height: 20px;
+  fill: rgba(255, 255, 255, 0.9);
+  display: block;
+}
