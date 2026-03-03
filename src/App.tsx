@@ -1,4 +1,3 @@
-import React from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import logo from "./assets/ADIDAS.png";
 import v1 from "./assets/mosaic/1.mp4";
