@@ -1,0 +1,77 @@
+/* TOP navbar */
+.navbar {
+  position: fixed;     /* stays on top */
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 72px;
+  background: #000;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  border-bottom: none;
+  z-index: 999;
+}
+
+/* Left / middle / right columns */
+.nav-left,
+.nav-center,
+.nav-right {
+  flex: 1;             /* each takes equal space */
+  display: flex;
+  align-items: center;
+}
+
+/* left content stays left */
+.nav-left {
+  justify-content: flex-start;
+  gap: 18px;
+  padding-left: 30px;
+}
+
+/* center content stays center */
+.nav-center {
+  justify-content: center;
+}
+
+/* right content stays right */
+.nav-right {
+  justify-content: flex-end;
+   padding-right: 30px;
+}
+
+/* menu links */
+.nav-link {
+  font-family: "Audiowide", ui-sans-serif, system-ui;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.nav-link:hover {
+  color: #fff;
+}
+
+/* logo image */
+.nav-logo {
+  height: 100px;   /* change this to make logo bigger */
+  width: auto;
+  display: block;
+}
+
+/* search input */
+.nav-search {
+  width: 220px;
+  height: 38px;
+  padding: 0 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: #0a0a0a;
+  color: #fff;
+  outline: none;
+}
+
+.nav-search::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}

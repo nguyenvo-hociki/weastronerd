@@ -1,0 +1,34 @@
+/* Social icons on right edge of the black page */
+.social-rail {
+  position: fixed;          /* stays on screen */
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 1000;            /* above videos */
+}
+
+.social-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(0,0,0,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icon:hover {
+  border-color: rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.06);
+}
+
+.icon-svg {
+  width: 20px;
+  height: 20px;
+  fill: rgba(255, 255, 255, 0.9);
+  display: block;
+}
