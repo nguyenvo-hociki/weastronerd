@@ -75,3 +75,23 @@
 .nav-search::placeholder {
   color: rgba(255, 255, 255, 0.45);
 }
+
+@media (max-width: 600px) {
+
+  /* Logo smaller so it never clips */
+  .nav-logo { height: 72px; }
+
+  /* Hide search on phone (or make it smaller) */
+  .nav-search { display: none; }
+
+  /* Reduce link spacing */
+  .nav-left {
+    gap: 12px;
+    padding-left: 10px;
+  }
+
+  .nav-link {
+    font-size: 3.1vw;
+    letter-spacing: 1px;
+  }
+}

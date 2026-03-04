@@ -31,7 +31,7 @@ export default function PosterSection() {
   }, []);
 
   // Banner scaling: start 1.0 -> end 0.78
-  const scale = 1 - progress * 0.2;
+  const scale = 1 - progress * 0.5;
   
   const posterStyle = useMemo(
   () => ({
@@ -50,7 +50,10 @@ export default function PosterSection() {
 
   return (
     <div ref={sectionRef}>
-      <div style={{ position: "sticky", top: 72, zIndex: 5 }}>
+      <div style={{ position: progress < 1 ? "sticky" : "relative",
+                    top: progress < 1 ? 72 : undefined,
+                    zIndex: 5,
+                  }}>
         <div className="poster" style={posterStyle}>
           <div className="poster-lines" />
 

@@ -32,7 +32,7 @@
 .poster-title {
   font-family: "Audiowide", ui-sans-serif, system-ui;
   color: rgba(255, 255, 255, 0.95);
-  font-size: clamp(40px, 7vw, 84px);
+  font-size: clamp(40px, 7vw, 84px); /*(min, preferred(7% of viewpoint), max)*/
   letter-spacing: 2px;
   line-height: 0.95;
   text-transform: uppercase;
@@ -149,12 +149,78 @@
 .arrow-kkk   { left: -140%; top: -50px; width: 140px; transform: rotate(40deg); }
 .title-big-arrow {
   position: absolute;
-  left: 40%;
+  left: 600px;
   top: -10px;
   width: 260px;
   transform: rotate(-10deg);
-
   pointer-events: none;
   opacity: 0.9;
   filter: drop-shadow(0 0 10px rgba(255,255,255,0.25));
+}
+
+@media (max-width: 600px) {
+  .poster {
+    width: 100%;
+    margin: 2vh auto; /*moving down to create space for search bar on top*/
+    border-radius: 15px;
+  }
+
+  .poster-spacer {
+    height: 120vh;   /* bigger runway so About starts after poster */
+  }
+
+  .poster-content {
+    padding: 20px;
+  }
+
+  .poster-title {
+    font-size: 10vw;
+  }
+
+  /* top label */
+  .poster-aboutus {
+    position: static;
+    margin-bottom: 10px;
+    font-size: 3.7vw;
+    opacity: 0.75;
+    text-align: left;
+  }
+
+  /* 4 pills -> 1 column */
+  .poster-mid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 30px;
+  }
+
+  .poster-pill {
+    width: 100%;
+    text-align: left;
+  }
+
+  .signature {
+    font-size: 8vw;
+  }
+
+  /* footer stacks */
+  .poster-footer {
+    margin-top: 30px;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .poster-small {
+    font-size: 3.5vw;
+  }
+
+  .poster-big-right {
+    font-size: 7vw;
+  }
+
+  /* arrows off on phone (they break layouts) */
+  .arrow-svg,
+  .title-big-arrow {
+    display: none;
+  }
 }

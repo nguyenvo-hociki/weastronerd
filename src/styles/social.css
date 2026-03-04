@@ -1,8 +1,8 @@
 /* Social icons on right edge of the black page */
 .social-rail {
   position: fixed;          /* stays on screen */
-  right: 18px;
-  top: 50%;
+  right: 10px;
+  top: 70%;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;

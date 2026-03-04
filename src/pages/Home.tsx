@@ -25,6 +25,11 @@ export default function Home() {
           ))}
         </div>
       </section>
+      
+      {/* Search bar between: */}
+      <div className="mobile-search">
+        <input className="mobile-search-input" placeholder="Search..." />
+      </div>
 
       {/* Section 2: */}
       <section style={{ background: "#000" }}>
