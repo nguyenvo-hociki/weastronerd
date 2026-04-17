@@ -26,7 +26,7 @@ export default function Navbar() {
 
       {/* RIGHT (search) */}
       <div className="nav-right">
-        <input className="nav-search" placeholder="Search..." />
+        <input className="nav-search" placeholder="Search..." aria-label="Search"/>
       </div>
     </header>
   );
