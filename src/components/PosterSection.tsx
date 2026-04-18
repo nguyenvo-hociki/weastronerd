@@ -59,7 +59,7 @@ useEffect(() => { //Scroll handler with rAF optimization
     [scale]
   );
 
-  // Click title: jump to about + force progress to 1 quickly
+  // Click title: scroll to the about section
   const collapseNow = () => {
     aboutRef.current?.scrollIntoView({ behavior: "smooth" });
   };
