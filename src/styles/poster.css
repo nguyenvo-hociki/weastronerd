@@ -1,0 +1,225 @@
+.poster {
+  width: calc(100% - 200px);
+  min-height: calc(100vh - 72px - 350px);
+  margin: 12px auto;
+  background: #161616; /* dark grey */
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+}
+
+.poster-lines {
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.1) 1px,
+    transparent 1px,
+    transparent 26px
+  );
+  pointer-events: none;
+}
+
+.poster-content {
+  position: relative;
+  height: 100%;
+  padding: 34px;
+  display: flex;
+  flex-direction: column;
+}
+
+.poster-title {
+  font-family: "Audiowide", ui-sans-serif, system-ui;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: clamp(40px, 7vw, 84px); /*(min, preferred(7% of viewpoint), max)*/
+  letter-spacing: 2px;
+  line-height: 0.95;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  width: fit-content;
+  transition: transform 180ms ease, text-shadow 180ms ease;
+  text-shadow: 0 0 14px rgba(180, 120, 255, 0.28);
+}
+
+.poster-title:hover {
+  transform: scale(1.02);
+  text-shadow: 0 0 18px rgba(180, 120, 255, 0.55),
+               0 0 40px rgba(80, 200, 255, 0.20);
+}
+
+.poster-aboutus {
+  position: absolute;
+  top: 22px;
+  right: 28px;
+  font-family: "Audiowide", ui-sans-serif, system-ui;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.poster-mid {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.poster-pill {
+  font-family: "Audiowide", ui-sans-serif, system-ui;
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(0, 0, 0, 0.25);
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  max-height: 45px;
+}
+
+.pill-block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.poster-footer {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.poster-small {
+  font-family: "Audiowide", ui-sans-serif, system-ui;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.poster-big-right {
+  font-family: "Audiowide", ui-sans-serif, system-ui;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: clamp(26px, 4vw, 54px);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.signature {
+  font-family: "Great Vibes", cursive;
+  font-size: 34px;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.5px;
+  transform: rotate(-8deg); /* slight handwritten feel */
+  display: inline-block;
+  transition: transform 180ms ease, opacity 180ms ease;
+  cursor: pointer;
+}
+
+.signature:hover {
+  transform: rotate(-2deg) scale(1.12); /* pop bigger */
+  opacity: 1;
+}
+
+.poster-spacer {
+  height: 1100px; /* creates extra scroll room (try 900–1800) */
+}
+
+.arrow-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.arrow-svg {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.9;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.25));
+}
+
+.arrow-eddie { left: -100%; top: 50px; width: 120px; transform: rotate(-30deg); }
+.arrow-julun { left: -170%; top: -40px; width: 130px; transform: rotate(30deg); }
+.arrow-kin6  { left: -150%; top: 40px;  width: 115px; transform: rotate(-20deg); }
+.arrow-kkk   { left: -140%; top: -50px; width: 140px; transform: rotate(40deg); }
+.title-big-arrow {
+  position: absolute;
+  left: 600px;
+  top: -10px;
+  width: 260px;
+  transform: rotate(-10deg);
+  pointer-events: none;
+  opacity: 0.9;
+  filter: drop-shadow(0 0 10px rgba(255,255,255,0.25));
+}
+
+@media (max-width: 600px) {
+  .poster {
+    width: 100%;
+    margin: 2vh auto; /*moving down to create space for search bar on top*/
+    border-radius: 15px;
+  }
+
+  .poster-spacer {
+    height: 120vh;   /* bigger runway so About starts after poster */
+  }
+
+  .poster-content {
+    padding: 20px;
+  }
+
+  .poster-title {
+    font-size: 10vw;
+  }
+
+  /* top label */
+  .poster-aboutus {
+    position: static;
+    margin-bottom: 10px;
+    font-size: 3.7vw;
+    opacity: 0.75;
+    text-align: left;
+  }
+
+  /* 4 pills -> 1 column */
+  .poster-mid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 30px;
+  }
+
+  .poster-pill {
+    width: 100%;
+    text-align: left;
+  }
+
+  .signature {
+    font-size: 8vw;
+  }
+
+  /* footer stacks */
+  .poster-footer {
+    margin-top: 30px;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .poster-small {
+    font-size: 3.5vw;
+  }
+
+  .poster-big-right {
+    font-size: 7vw;
+  }
+
+  /* arrows off on phone (they break layouts) */
+  .arrow-svg,
+  .title-big-arrow {
+    display: none;
+  }
+}

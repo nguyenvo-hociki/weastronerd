@@ -1,0 +1,35 @@
+
+.about {
+  font-family: "Audiowide", ui-sans-serif, system-ui;
+  width: 100%;
+  padding-left: 100px;
+  text-align: left;
+   /* smaller top padding so it sits closer */
+}
+
+.about h2 {
+  font-family: "Audiowide", ui-sans-serif, system-ui;
+  font-weight: 700;            /* bold */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0 0 14px 0;
+}
+
+.about p {
+  font-family: "Audiowide", ui-sans-serif, system-ui;
+  font-size: 1.08rem;
+  line-height: 1.8;
+  text-align: left;
+  max-width: 1000px;      /* important: give paragraph real width */
+  width: 100%;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+@media (max-width: 600px) {
+  .about {padding: 20px 16px 60px;
+          max-width: 94vw;}
+  .about h2 {font-size: 22px;}
+  .about p {
+    font-size: 14px;}
+}
