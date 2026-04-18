@@ -155,7 +155,7 @@ useEffect(() => { //Scroll handler with rAF optimization
         </div>
       </div>
 
-      {/*About us bellow */}
+      {/*About us below */}
       <div className="poster-spacer" />
       <div className="about" ref={aboutRef} id="about">
         <h2>Who we are</h2>
