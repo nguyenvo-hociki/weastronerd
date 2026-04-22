@@ -116,7 +116,7 @@ useEffect(() => { //Scroll handler with rAF optimization
               <div className="pill-block">
                 <div className="poster-pill">Kuala Lumpur, Malaysia</div>
                 <div className="arrow-wrap">
-                  <Link className="signature" to="/artists">Eddie.P</Link>
+                  <Link className="signature" to="/artists/eddie-p">Eddie.P</Link>
                   <Arrow className="arrow-svg arrow-sig arrow-eddie" d={"M10 70 C 45 78, 95 18, 140 35"} />
                 </div>
               </div>
@@ -124,7 +124,7 @@ useEffect(() => { //Scroll handler with rAF optimization
               <div className="pill-block">
                 <div className="poster-pill">Brisbane, Australia</div>
                 <div className="arrow-wrap">
-                  <Link className="signature" to="/artists">Julun</Link>
+                  <Link className="signature" to="/artists/julun">Julun</Link>
                   <Arrow className="arrow-svg arrow-sig arrow-julun" d={"M10 70 C 75 98, 95 18, 140 35"} />
                 </div>
               </div>
@@ -132,7 +132,7 @@ useEffect(() => { //Scroll handler with rAF optimization
               <div className="pill-block">
                 <div className="poster-pill">Texas, USA</div>
                 <div className="arrow-wrap">
-                  <Link className="signature" to="/artists">Kin6</Link>
+                  <Link className="signature" to="/artists/kin6">Kin6</Link>
                   <Arrow className="arrow-svg arrow-sig arrow-kin6" d={"M10 70 C 95 100, 95 38, 140 35"} />
                 </div>
               </div>
@@ -140,15 +140,15 @@ useEffect(() => { //Scroll handler with rAF optimization
               <div className="pill-block">
                 <div className="poster-pill">Vancouver, Canada</div>
                 <div className="arrow-wrap">
-                  <Link className="signature" to="/artists">Kkkuiii</Link>
-                  <Arrow className="arrow-svg arrow-sig arrow-kkk" d={"M10 70 C 95 108, 75 38, 140 35"} />
+                  <Link className="signature" to="/artists/leo">Leo</Link>
+                  <Arrow className="arrow-svg arrow-sig arrow-leo" d={"M10 70 C 95 108, 75 38, 140 35"} />
                 </div>
               </div>
             </div>
 
             <div className="poster-footer">
               <div className="poster-small">WEASTRONERD.COM</div>
-              <div className="poster-big-right">SINCE 2024</div>
+              <div className="poster-big-right">SINCE 2019</div>
             </div>
 
           </div>
@@ -162,7 +162,7 @@ useEffect(() => { //Scroll handler with rAF optimization
         <p>
           "We met at Phan Boi Chau High School in Cam Ranh City, Khanh Hoa, Vietnam."<br />
           <br />
-          "Formed in 2021, the band consists of Vo Nguyen Minh Hieu (Kin6), Pham Khanh Truong (Eddie P), Nguyen Hoai Vu Luan (Julun), and Nguyen Quoc Dung (Dung)."<br />
+          "Formed in 2021, the band consists of Vo Nguyen Minh Hieu (Kin6), Pham Khanh Truong (Eddie P), Nguyen Hoai Vu Luan (Julun), and Nguyen Quoc Dung (Leo)."<br />
           <br />
           "We are not made to fit into a box.<br />
           Each member brings a distinct color, meeting at a shared point through music and difference in music,
