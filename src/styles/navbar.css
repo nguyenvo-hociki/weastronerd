@@ -78,8 +78,22 @@
 
 @media (max-width: 600px) {
 
+  .navbar {
+    position: fixed;
+    min-height: 72px;
+    padding: 0 10px;
+  }
+
+  .nav-center {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    flex: 0;
+    justify-content: flex-end;
+  }
+
   /* Logo smaller so it never clips */
-  .nav-logo { height: 72px; }
+  .nav-logo { height: 68px; }
 
   /* Hide search on phone (or make it smaller) */
   .nav-search { display: none; }

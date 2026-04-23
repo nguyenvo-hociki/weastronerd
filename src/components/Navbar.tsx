@@ -6,9 +6,9 @@ export default function Navbar() {
     <header className="navbar">
       {/* LEFT */}
       <nav className="nav-left">
-        <Link className="nav-link" to="/artists">
+        <a className="nav-link" href="/artists">
           Artists
-        </Link>
+        </a>
         <Link className="nav-link" to="/albums">
           Albums
         </Link>
@@ -19,9 +19,9 @@ export default function Navbar() {
 
       {/* CENTER (logo) */}
       <div className="nav-center">
-        <Link to="/" aria-label="Go to home">
+        <a href="/" aria-label="Go to home">
           <img className="nav-logo" src={logo} alt="Logo" />
-        </Link>
+        </a>
       </div>
 
       {/* RIGHT (search) */}
